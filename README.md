@@ -38,7 +38,7 @@ Build firmware images as descripted in https://arduino-esp8266.readthedocs.io/en
 
 Images are stored on the Docker host in the local firmware directory defined in the Docker run command to be bound to ./bin/
 
-The filename must be the <ESP MAC Address>.bin. All letters must be upper case.
+The filename must be the "ESP MAC Address".bin. All letters must be upper case.
 
 eg. CC50E3CBAFEC.bin
 
