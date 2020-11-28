@@ -40,7 +40,7 @@ Sketch->Export compiled binary
 
 ### Store images ###
 
-Images are stored on the Docker host in the local firmware directory defined in the Docker run command to be bound to ./bin/
+Images are stored on the Docker host in the local firmware directory defined in the Docker run command to be bound to /var/www/html/bin
 
 The filename must be the "ESP MAC Address".bin. All letters must be upper case.
 
