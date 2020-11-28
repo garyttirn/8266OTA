@@ -6,11 +6,15 @@ Based on example found in https://arduino-esp8266.readthedocs.io/en/latest/ota_u
 
 ## Build the container ##
 
+```
 docker build -t <builder>/8266ota .
+```
 
 ## Run the container ##
 
+```
 docker run -d -p 4080:80 --dns=<serverip> --restart always --mount type=bind,source=<local firmware directory>,target=/var/www/html/bin,readonly --name 8266OTA <builder>/8266ota
+```
 
 ## ESP Integration ##
 
@@ -32,9 +36,9 @@ Build firmware images as descripted in https://arduino-esp8266.readthedocs.io/en
 
 ### Store images ###
 
-Images are stored on the Docker host in the <local firmware directory> defined in the Docker run command to be bound to ./bin/
+Images are stored on the Docker host in the local firmware directory defined in the Docker run command to be bound to ./bin/
 
-The file name must be the <ESP MAC Address>.bin. All letters must be upper case.
+The filename must be the <ESP MAC Address>.bin. All letters must be upper case.
 
 eg. CC50E3CBAFEC.bin
 
@@ -42,7 +46,7 @@ The server compares file modification timestamp (DDMMYYYY) to the version provid
 
 The timestamp of the image can be changed using eg. touch :
 ```
-touch -t "MMDDhhmm" <image.bin>
+touch -t MMDDhhmm <image.bin>
 ```
 
 ## Other Information ##
