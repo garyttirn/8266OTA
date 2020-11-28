@@ -32,7 +32,7 @@ This can be done by following code :
 
 ### ESP Image Building ###
 
-Build firmware images as usual, but instead of uploading export compiled binaries to file by selecting
+Build firmware images as usual but instead of uploading export compiled binaries to file by selecting
 
 ```
 Sketch->Export compiled binary
@@ -50,7 +50,7 @@ eg.
 CC50E3CBAFEC.bin
 ```
 
-The server compares file modification timestamp (DDMMYYYY) to the version provided by the ESP and the MD5 checksums of current image and local image offering new image to the ESP8266.
+The server compares file modification timestamp (format DDMMYYYY) to the version provided by the ESP and the MD5 checksums of current image and local image offering new image to the ESP8266.
 
 The timestamp of the image can be changed using eg. touch :
 ```
@@ -60,9 +60,11 @@ touch -t MMDDhhmm <image.bin>
 ## Caveats ##
 
 The server doesn't check if the image will actually fit to the ESP memory, it will happily serve oversized images.
+
 This version has no security implemented, upgrades should only be done in a trusted network environment.
 
 ## Other Information ##
 
 Big thanks to Erik H. Bakke for excellent blogs on the subject.
+
 https://www.bakke.online/index.php/2017/06/02/self-updating-ota-firmware-for-esp8266/
