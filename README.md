@@ -30,6 +30,9 @@ This can be done by following code :
 
 ```
 
+Full ESP code example is provided here, FW version is defined in _config.h_ 
+https://github.com/garyttirn/Vera-ESP8266-DHT22-OTA
+
 ### ESP Image Building ###
 
 Build firmware images as usual but instead of uploading export compiled binaries to file by selecting
